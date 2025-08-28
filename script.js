@@ -7,21 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
         lastUpdated.textContent = now.toLocaleDateString();
     }
 
-    // Simple visitor counter (client-side only)
-    let visitorCount = localStorage.getItem('visitorCount');
-    if (!visitorCount) {
-        visitorCount = Math.floor(Math.random() * 1000) + 100; // Random starting number
-        localStorage.setItem('visitorCount', visitorCount);
-    } else {
-        visitorCount = parseInt(visitorCount) + 1;
-        localStorage.setItem('visitorCount', visitorCount);
-    }
-    
-    const counterElement = document.querySelector('.counter');
-    if (counterElement) {
-        counterElement.textContent = visitorCount.toString().padStart(6, '0');
-    }
-
     // Simple navigation functionality
     const navLinks = document.querySelectorAll('nav a');
     const sections = document.querySelectorAll('main section');
