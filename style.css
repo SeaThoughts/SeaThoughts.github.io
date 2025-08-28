@@ -1,0 +1,217 @@
+/* Retro Web Design CSS */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Courier New", monospace;
+    background-color: #c0c0c0;
+    color: #000000;
+    margin: 0;
+    padding: 10px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><rect width="20" height="20" fill="%23c0c0c0"/><rect x="0" y="0" width="1" height="1" fill="%23808080"/></svg>');
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 2px outset #c0c0c0;
+    padding: 20px;
+    box-shadow: 4px 4px 0px #808080;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #800080;
+    text-shadow: 2px 2px 0px #ffff00;
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: rainbow 3s linear infinite;
+}
+
+@keyframes rainbow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+.tagline {
+    font-style: italic;
+    color: #808080;
+    margin: 5px 0;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: #0000ff;
+    text-decoration: underline;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #ffff00;
+    color: #000000;
+}
+
+h2 {
+    color: #800000;
+    text-decoration: underline;
+    font-size: 1.5em;
+    margin-top: 25px;
+}
+
+h3 {
+    color: #008000;
+    margin-bottom: 5px;
+}
+
+.news-box {
+    border: 2px inset #c0c0c0;
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.news-box h3 {
+    margin-top: 0;
+    color: #000080;
+}
+
+.news-box ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.stats {
+    background-color: #ffffcc;
+    border: 1px solid #000000;
+    padding: 10px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.counter {
+    font-family: "Courier New", monospace;
+    background-color: #000000;
+    color: #00ff00;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.post {
+    border-left: 4px solid #ff0000;
+    padding-left: 15px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px dashed #808080;
+}
+
+.post-meta {
+    font-size: 0.9em;
+    color: #666666;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.guestbook-entry {
+    background-color: #e0e0e0;
+    border: 1px solid #808080;
+    padding: 10px;
+    margin: 10px 0;
+    border-left: 4px solid #008080;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #666666;
+}
+
+footer hr {
+    border: 1px solid #808080;
+    margin: 20px 0;
+}
+
+footer a {
+    color: #800080;
+}
+
+.webring {
+    margin-top: 10px;
+    font-family: "Times New Roman", serif;
+}
+
+/* Blinking text effect */
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Retro button style */
+button, input[type="submit"] {
+    background-color: #c0c0c0;
+    border: 2px outset #c0c0c0;
+    padding: 5px 15px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+button:active, input[type="submit"]:active {
+    border: 2px inset #c0c0c0;
+}
+
+/* Scrolling marquee effect */
+.marquee {
+    background-color: #000080;
+    color: #ffffff;
+    padding: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee p {
+    display: inline-block;
+    animation: scroll 15s linear infinite;
+    margin: 0;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        margin: 5px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
