@@ -5,17 +5,20 @@
 
 body {
     font-family: "Courier New", monospace;
-    background-color: #c0c0c0;
     color: #000000;
     margin: 0;
     padding: 10px;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><rect width="20" height="20" fill="%23c0c0c0"/><rect x="0" y="0" width="1" height="1" fill="%23808080"/></svg>');
+    /* Replace 'your-image.jpg' with the path to your image */
+    background-image: url('https://64.media.tumblr.com/fad4cee4c34914dd33c2204c09cf7668/tumblr_inline_mqvlarhoKt1qz4rgp.gif');
+    background-repeat: repeat; /* or 'repeat', 'repeat-x', 'repeat-y' */
+    background-position: center; /* or 'top', 'bottom', 'left', 'right', specific position */
+    background-attachment: fixed; /* keeps background fixed when scrolling */
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: #fffffff1;
     border: 2px outset #c0c0c0;
     padding: 20px;
     box-shadow: 4px 4px 0px #808080;
@@ -64,6 +67,21 @@ nav a {
 nav a:hover {
     background-color: #ffff00;
     color: #000000;
+}
+
+/* Glitter HOME images styling */
+nav a img {
+    height: 16px;
+    width: auto;
+    vertical-align: middle;
+    margin: 0 1px;
+    display: inline-block;
+}
+
+nav a[href="#home"] {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
 }
 
 h2 {
@@ -212,6 +230,17 @@ button:active, input[type="submit"]:active {
     
     nav a {
         display: block;
+        margin: 5px 0;
+    }
+    
+    /* Make glitter images smaller on mobile */
+    nav a img {
+        height: 14px;
+    }
+    
+    nav a[href="#home"] {
+        display: block;
+        text-align: center;
         margin: 5px 0;
     }
 }
